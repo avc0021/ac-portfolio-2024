@@ -1,13 +1,18 @@
-/* Styles for the App component */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container {
+  max-width: 1200px; /* Set a maximum width for the main container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Add padding for better appearance */
 }
 
 .navbar {
-  background-color: #333;
   padding: 1rem;
   display: flex;
   justify-content: flex-end; /* Align items to the right */
@@ -16,43 +21,87 @@ body {
 .navbar button {
   background: none;
   border: none;
-  color: white;
+  color: #41403C;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1rem;
   margin-left: 1rem; /* Add margin between buttons */
+  border-radius: 8px; /* Optional: Adding rounded corners */
 }
 
 .navbar button:hover {
-  background-color: #555;
+  background-color: #EDEFEE;
+  border-radius: 8px;
 }
 
 .home-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 3rem;
-  height: calc(100vh - 70px);
-  flex-direction: row; 
+  text-align: center;
+  background: #EDEFEE;
+  border: 1px solid #ccc;
+  width: 100%; /* Ensure it uses the full width available */
 }
 
 .home-text {
-  text-align: right;
-  margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .home-text h1 {
   margin: 0.5rem 0;
 }
 
+.home-text h2 {
+  margin: 0.5rem 0;
+  font-weight: normal;
+  color: #666;
+}
+
 .avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-left: 1rem; /* Adding margin between text and avatar */
+  margin-bottom: 1rem;
 }
 
-.TypeEffect {
-  display: inline-block; /* Ensuring type effect stays inline */
+.description {
+  margin-top: 1rem;
+  color: #666;
+}
+
+.home-extra {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  flex-wrap: wrap; /* Ensure it wraps in smaller screens */
+}
+
+.about-section, .contact-section {
+  width: 100%; /* Ensure sections take full width on small screens */
+  max-width: 45%; /* Limit width on larger screens */
+  text-align: left;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+
+.contact-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-links li {
+  margin: 0.5rem 0;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
 }
 
 .loader {
